@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!-- trying to make a ball go and touch the boundaries by css animation -->
+<html>
+<head>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <style>
+        @keyframes move{
+            0%
+            {
+                left : 0;
+                top : 75%;
+                color: yellow;
+            }
+            25%
+            {
+                left: 25%;
+                bottom :0;
+                color: yellowgreen;
+            }
+            50%
+            {
+                right : 0;
+                top : 25%;
+                color: orange;
+            }
+            75%
+            {
+                right : 25%;
+                top : 0;
+                color: plum;
+            }
+            100%
+            {
+                left : 0;
+                top : 75%;
+                color: yellow;
+            
+            }
+        }
+
+        #mine{
+          position: relative;  
+          animation-name:move;
+          animation-duration: 4s;
+          animation-iteration-count: infinite;
+          
+        }
+    </style>
+</head>
+
+<body>
+<svg id="svg" style="width:100%; height:-webkit-fill-available">
+    <circle id="mine" cx="200" cy="200" r="50"/>
+ </svg>
+</body>
+
+<script>
+    
+
+   
+</script>
+
+</html>
